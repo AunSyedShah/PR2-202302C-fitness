@@ -1,0 +1,36 @@
+# Bun configuration file
+[dev]
+# Enable hot reloading for development
+hot = true
+
+[install]
+# Use exact versions for better reproducibility
+exact = true
+# Cache packages for faster installs
+cache = true
+# Production optimizations
+production = false
+
+[run]
+# Environment variables
+env = ".env"
+# Enable source maps for debugging
+sourcemap = "external"
+
+[build]
+# Build configuration
+target = "bun"
+format = "esm"
+outdir = "./dist"
+minify = false
+splitting = true
+
+[test]
+# Test configuration
+preload = ["./test-setup.js"]
+timeout = 30000
+
+# Package manager settings
+[lockfile]
+# Save exact versions in lockfile
+save-exact = true
